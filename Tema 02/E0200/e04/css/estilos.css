@@ -1,0 +1,32 @@
+h1 {
+	color: red;
+}
+
+.trabajador {
+	background-color: grey;
+}
+
+.titulo-1 {
+	color: blue;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.datos-1, .datos-2 {
+	border: 2px solid black;
+}
+
+.estudios-1, .estudios-2 {
+	border-width: 5px;
+	border-style: double;
+}
+
+.titulo-2 {
+	color: green;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.sub {
+	text-decoration: underline;
+}
