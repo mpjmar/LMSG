@@ -30,7 +30,7 @@ h1, h2 {
     justify-content: center;
     border-radius: 10px;
     padding: 2rem;
-    align-items: center;
+    margin: auto;
 }
 
 .imagen {
@@ -44,7 +44,7 @@ h1, h2 {
     border: 1px solid #DDD;
     border-collapse: collapse;
     margin-bottom: 20px;
-    text-align: center;
+    margin: auto;
 }
 
 .tabla-exitos th {
@@ -58,7 +58,12 @@ h1, h2 {
     padding: 10px;
     border: 1px solid #DDD;
     text-align: left;
-    white-space: no;
+    white-space: no-wrap;
+}
+
+.web {
+    color: orangered;
+    font-weight: bold;
 }
 
 .pie {
