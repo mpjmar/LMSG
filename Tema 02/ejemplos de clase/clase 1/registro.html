@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro">
+    <link rel="stylesheet" href="estilos/registro.css">
+    <title>GameZone</title>
+</head>
+
+<body>
+    <header class="cabecera">
+		<h1>Registro</h1>
+		<p>Date de alta con nosotros para recibir ofertas y noticias.</p>
+	</header>
+
+	<main id="contenido-principal">
+		<form name="datos-personales" method="post" action="https://alarturing.com/lmsg/">
+			<div class="campo">
+				<label for="nombre">Nombre: </label>
+				<input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" autocomplete="off" required>
+			</div>
+			<div class="campo">
+				<label for="apellidos">Apellidos: </label>
+				<input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" autocomplete="off" required>
+			</div>
+			<div class="campo">
+				<label for="telefono">Teléfono: </label>
+				<input type="tel" id="telefono" name="telefono" placeholder="Introduce tu telefono" autocomplete="off">
+			</div>
+			<div class="campo">
+				<label for="fech-nac">Fecha de nacimiento: </label>
+				<input type="date" id="fech-nac" name="fecha-nac" autocomplete="off">
+			</div>
+			<div class="campo">
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" placeholder="Introduce tu email" autocomplete="off" required>
+			</div>
+			<div class="campo">
+				<label for="usuario">Usuario: </label>
+				<input type="text" id="usuario" name="usuario" placeholder="Introduce tu nombre de usuario" autocomplete="off" required>
+			</div>
+			<div class="campo">
+				<label for="password">Contraseña: </label>
+				<input type="password" id="password" name="password" placeholder="Introduce tu contraseña" autocomplete="off" required>
+			</div>
+
+			<div class="campo">
+				<button type="submit" class="boton-enviar">Enviar</button>
+			</div>
+		</form>
+
+	</main>
+
+	<footer class="pie">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </footer>
+</body>
