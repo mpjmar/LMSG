@@ -61,7 +61,7 @@ body {
     flex-grow: 1; /* factor de crecimiento para empujar al footer */
 }
 
-.tarjeta {
+.caja-registro {
     background: #eae2f0;
     border-radius: 10px;
     width: min(900px, 95%);
