@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+	<header>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="M. Paz Jimenez">
+		<link rel="stylesheet" href="estilos.css">
+		<title>Incidencias</title>
+	</header>
+
+	<body>
+		<head>
+			<div class="cabecera">
+				<img class="imagen" src="imagenes/IAT-LOGOTIPO.jpg" alt="logotipo del centro">
+			</div>
+		</head>
+		<main>
+			<section class="tarjeta">
+				<form name="nueva-incidencia" action="procesarincidencia.php”" method="post" autocomplete="off">
+					<fieldset>
+						<legend>Nueva incidencia</legend>
+
+						<div class="elemento-formulario">
+							<label for="profesor">Profesor*:</label>
+							<input type="text" id="profesor" name="profesor" placeholder="Escribe tu nombre aquí" autocomplete="off" required>
+						</div>
+
+						<div class="elemento-formulario">
+							<label for="email">Correo electrónico*:</label>
+							<input type="email" id="email" name="email" placeholder="Escribe tu correo aquí" autocomplete="off" required>
+						</div>
+
+						<div class="elemento-formulario">
+							<label for="departamento">Departamento*:</label>
+							<select name="departamento" id="departamento" required>
+								<option value="informatica" selected>Informática</option>
+								<option value="ingles">Inglés</option>
+								<option value="electronica">Electrónica</option>
+								<option value="telecomunicaciones">Telecomunicaciones</option>
+							</select>
+						</div>
+
+						<div class="elemento-formulario">
+							<label for="aula">Aula*: </label>
+							<input type="text" id="aula" name="aula" placeholder="Indica aquí el aula de la incidencia" required>
+						</div>
+
+						<div class="elemento-formulario">
+							<label for="dia">Día de la incidencia*: </label>
+							<input type="week" id="dia" required>
+						</div>
+
+						<div class="elemento-formulario">
+							<label for="hora">Hora de la incidencia*: </label>
+							<input type="time" id="hora" required>
+						</div>
+
+						<div class="elemento-formulario">
+							<p>Descripción de la incidencia*: </p>
+							<textarea name="descripcion" id="descripcion" cols="30" rows="4" required></textarea>
+						</div>
+
+						<div class="elemento-formulario">
+							<p>Imagen de la incidencia(opcional):</p>
+							<input type="file" name="archivo" id="archivo">
+						</div>
+
+						<div class="elemento-formulario botones">
+							<input type="submit" value="Enviar incidencia">
+							<input type="reset" value="Borrar formulario">
+						</div>
+					</fieldset>
+				</form>
+			</section>
+		</main>
+	</body>
+		
+	<footer>
+		<p>Síguenos</p>
+	</footer>
+</html>
