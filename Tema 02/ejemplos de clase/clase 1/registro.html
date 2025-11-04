@@ -11,49 +11,71 @@
 
 <body>
     <header class="cabecera">
-		<h1>Registro</h1>
-		<p>Date de alta con nosotros para recibir ofertas y noticias.</p>
-	</header>
+        <div class="brand">
+            <img class="logo" src="imagenes/gamezone-logo.png" alt="Logo de GameZone">
+            <!-- <h1 class="titulo">GameZone</h1> -->
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="a">Inicio</a></li>
+                <li><a href="a">Noticias</a></li>
+                <li><a href="a">Guías</a></li>
+                <li><a href="a">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main id="contenido-principal">
-		<form name="datos-personales" method="post" action="https://alarturing.com/lmsg/">
-			<div class="campo">
-				<label for="nombre">Nombre: </label>
-				<input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" autocomplete="off" required>
-			</div>
-			<div class="campo">
-				<label for="apellidos">Apellidos: </label>
-				<input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" autocomplete="off" required>
-			</div>
-			<div class="campo">
-				<label for="telefono">Teléfono: </label>
-				<input type="tel" id="telefono" name="telefono" placeholder="Introduce tu telefono" autocomplete="off">
-			</div>
-			<div class="campo">
-				<label for="fech-nac">Fecha de nacimiento: </label>
-				<input type="date" id="fech-nac" name="fecha-nac" autocomplete="off">
-			</div>
-			<div class="campo">
-				<label for="email">Email: </label>
-				<input type="email" id="email" name="email" placeholder="Introduce tu email" autocomplete="off" required>
-			</div>
-			<div class="campo">
-				<label for="usuario">Usuario: </label>
-				<input type="text" id="usuario" name="usuario" placeholder="Introduce tu nombre de usuario" autocomplete="off" required>
-			</div>
-			<div class="campo">
-				<label for="password">Contraseña: </label>
-				<input type="password" id="password" name="password" placeholder="Introduce tu contraseña" autocomplete="off" required>
-			</div>
+	<main id="caja-registro">
+		<section>
+			<form name="registro" method="registro.php" class="form registro">
+				<fieldset>
+					<legend>Datos de registro</legend>
+				
+					<div class="form-row">
+						<label for="nombre">Nombre: </label>
+						<input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" autocomplete="off" required>
+					</div>
 
-			<div class="campo">
-				<button type="submit" class="boton-enviar">Enviar</button>
-			</div>
-		</form>
+					<div class="form-row">
+						<label for="edad">Edad: </label>
+						<input type="edad" id="edad" name="edad" placeholder="Introduce tu edad" autocomplete="off" required>
+					</div>
 
+					<div class="form-row">
+						<label for="fech-nac">Fecha de nacimiento: </label>
+						<input type="date" id="fech-nac" name="fecha-nac" autocomplete="off">
+					</div>
+
+					<div class="form-row">
+						<label for="dni">DNI/NIE: </label>
+						<input type="text" name="id" id="dni" pattern="([X-Zx-z]|[0-9])[0-9]{7}-?[A-Za-z]">
+					</div>
+
+					<div class="form-row">
+						<label for="email">Email: </label>
+						<input type="email" id="email" name="email" placeholder="Introduce tu email" autocomplete="off" required>
+					</div>
+
+					<div class="form-row">
+						<label for="usuario">Usuario: </label>
+						<input type="text" id="usuario" name="usuario" placeholder="Introduce tu nombre de usuario" autocomplete="off" required>
+					</div>
+
+					<div class="form-row">
+						<label for="password">Contraseña: </label>
+						<input type="password" id="password" name="password" placeholder="Introduce tu contraseña" autocomplete="off" required>
+					</div>
+
+					<div class="form-row">
+						<input type="submit" class="boton-enviar">Registrar</input>
+					</div>
+				</fieldset>
+			</form>
+		</section>
 	</main>
 
 	<footer class="pie">
         <p>&copy; 2025 Todos los derechos reservados</p>
     </footer>
 </body>
+</html>
