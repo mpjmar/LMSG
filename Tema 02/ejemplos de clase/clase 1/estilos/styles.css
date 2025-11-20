@@ -179,6 +179,10 @@ legend {
     padding: 10px;
     justify-items: center;
     align-items: center;
+    /* align-items + justify-items */
+    place-items: center;
+    /* align-content + justify-content */
+    place-content: center;
 }
 
 .contenedor-grid :nth-child(1) { background-color: #b60000;}
@@ -192,7 +196,8 @@ legend {
 .contenedor-grid :nth-child(9) { background-color: indianred;}
 .contenedor-grid :nth-child(10) { background-color: indianred;}
 
-.contenedor-grid-2 {display: grid;
+.contenedor-grid-2 {
+    display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
     gap: 10px;
