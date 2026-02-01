@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Ejercicios básicos</title>
+</head>
+<body>
+	<header>
+		<h1>Ejercicios básicos</h1>
+	</header>
+
+	<main>
+		<!-- EJERCICIO 01 -->
+		<p id="datos"></p>
+
+		<!-- EJERCICIO 02 -->
+		<p class="suma"></p>
+		<p class="resta"></p>
+		<p class="multiplica"></p>
+		<p class="division"></p>
+		<p class="resto"></p>
+
+		<!-- EJERCICIO 03 -->
+		<p class="edad"></p>
+
+		<!-- EJERCICIO 04 -->
+		 <p class="mes"></p>
+
+		 <!-- EJERCICIO 05 -->
+		  <p class="numWhile"></p>
+		  <p class="numDoWhile"></p>
+		  <p class="numFor"></p>
+
+		  <!-- EJERCICIO 06 -->
+		   <div class="contenedor"></div>
+
+		<script>
+			// EJERCICIO 01
+			let nombre = "Paz";
+			const edad = 53;
+			document.getElementById("datos").textContent = `Mi nombre es ${nombre} y tengo ${edad} años.`;
+
+			// EJERCICIO 02
+			const a = 12;
+			const b = 5;
+			document.querySelector(".suma").textContent = `${a} + ${b} = ${a + b}`;
+			document.querySelector(".resta").textContent = `${a} - ${b} = ${a - b}`;
+			document.querySelector(".multiplica").textContent = `${a} * ${b} = ${a * b}`;
+			document.querySelector(".division").textContent = `${a} / ${b} = ${a / b}`;
+			document.querySelector(".resto").textContent = `${a} % ${b} = ${a % b}`;
+
+			// EJERCICIO 03
+			let edad2 = 25;
+			const parrafo = document.querySelector(".edad");
+			if (edad2 >= 18) {
+				parrafo.textContent = "Mayor de edad";
+				parrafo.className = "mayor";
+			}
+			else {
+				parrafo.textContent = "Menor de edad";
+				parrafo.className = "menor";
+			}
+
+			// ejercicio 04
+			const mes = 7;
+			const p_mes = document.querySelector(".mes");
+			let nombreMes = "";
+			switch (mes) {
+				case 1: 
+					nombreMes = "enero";
+					break;
+				case 2: 
+					nombreMes = "febrero";
+					break;
+				case 3:
+					nombreMes = "marzo";
+					break;
+				case 4:
+					nombreMes = "abril";
+					break;
+				case 5:
+					nombreMes = "mayo";
+					break;
+				case 6:
+					nombreMes = "junio";
+					break;
+				case 7:
+					nombreMes = "julio";
+					break;
+				case 8:
+					nombreMes = "agosto";
+					break;
+				case 9:
+					nombreMes = "septiembre";
+					break;
+				case 10:
+					nombreMes = "octubre";
+					break;
+				case 11:
+					nombreMes = "noviembre";
+					break;
+				case 12:
+					nombreMes = "diciembre";
+					break;
+				default: 
+					nombreMes = "ERROR. Mes incorrecto.";
+					p_mes.classList.add("error");
+			}
+			p_mes.textContent = nombreMes;
+
+			// EJERCICIO 05
+			let num = 1;
+			let resul = "";
+			let bucleWhile = document.querySelector(".numWhile");
+			while (num <= 10) {
+				resul += num + " ";
+				num++;
+			}
+			bucleWhile.textContent = resul;
+
+			num = 1;
+			resul = "";
+			let bucleDoWhile = document.querySelector(".numDoWhile");
+			do {
+				resul += num + " ";
+				num++;
+			} while (num <= 10);
+			bucleDoWhile.textContent = resul;
+
+			resul = "";
+			let bucleFor = document.querySelector(".numFor");
+			for (num = 1; num <= 10; num++) {
+				resul += num + " ";
+			}
+			bucleFor.textContent = resul;
+
+			// EJERCICIO 06
+			for (let i = 1; i <= 6; i++) {
+				let h = document.createElement("h" + i);
+				h.textContent = "Encabezado h" + i;
+				document.querySelector(".contenedor").appendChild(h);
+			}
+
+		</script>
+	</main>
+</body>
+</html>

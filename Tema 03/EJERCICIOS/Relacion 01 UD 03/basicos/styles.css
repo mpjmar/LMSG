@@ -1,0 +1,102 @@
+/* EJERCICIO 01 */
+#datos {
+	color: cyan;
+	font-size: 20px;
+}
+
+/* EJERCICIO 02 */
+.suma {
+	color: crimson;
+	text-decoration: underline;
+}
+
+.resta {
+	color: blueviolet;
+	text-decoration: underline;
+}
+
+.multiplica {
+	color: cornflowerblue;
+	text-decoration: underline;
+}
+
+.division {
+	color: darkgreen;
+	text-decoration: underline;
+}
+
+.resto {
+	color: darkorange;
+	text-decoration: underline;
+}
+
+/* EJERCICIO 03 */
+.edad {
+	font-size: 24;
+	font-weight: bold;
+}
+
+.mayor {
+	color: darkblue;
+}
+
+.menor {
+	color: darkcyan;
+}
+
+/* EJERCICIO 04 */
+.mes {
+	font-style: italic;
+	color: green;
+	font-size: 24;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	font-size: 30;
+}
+
+/* EJERCICIO 05 */
+.numWhile {
+	color: orangered;
+}
+
+.numDoWhile {
+	color: blueviolet;
+}
+
+.numFor {
+	color: darkorange;
+}
+
+/* EJERCICIO 06 */
+h1 {
+	background-color: aquamarine;
+	color: darkcyan;
+}
+
+h2 {
+	background-color: lightgreen;
+	color: darkgreen
+}
+
+h3 {
+	background-color: lightpink;
+	color: magenta;
+}
+
+h4 {
+	background-color: lightskyblue;
+	color: blue;
+}
+
+h5 {
+	background-color: lightsalmon;
+	color: brown;
+}
+
+h6 {
+	background-color: darkkhaki;
+	color: yellow;
+}
