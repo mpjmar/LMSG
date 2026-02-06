@@ -8,19 +8,32 @@
 
 header {
     padding: 1rem;
+    text-align: center;
 }
 
 h1 {
-    font-family: 'Segment7Standard', monospace;
     font-size: 2.2rem;
     text-transform: uppercase;
     font-style: 900;
     letter-spacing: 2px;
-    text-align: center;
 }
 
 body {
     background-color: #f0fff0;
+    font-family: 'Segment7Standard', monospace;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculadora {
@@ -29,9 +42,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0 , 0.3);
     width: 320px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
 }
 
 .pantalla {
