@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Segment7Standard";
+    src: url("../recursos_calculadora/fonts/Segment7Standard.otf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+header {
+    padding: 1rem;
+}
+
+h1 {
+    font-family: 'Segment7Standard', monospace;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-style: 900;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: #f0fff0;
+}
+
+.calculadora {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0 , 0.3);
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pantalla {
+    background-color: #000;
+    font-family: 'Segment7Standard', monospace;
+    padding: 25px;
+    border-radius: 10px;
+    height: 70px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.digitos {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.error {
+    color: red;
+}
+
+.res_suma {
+    color: #4bff4b;   
+}
+
+.res_resta {
+    color: #ff884b;
+}
+
+.res_multi {
+    color: #ffbf00;
+}
+
+.res_div {
+    color: #00c8ff;
+}
+
+.res_invers {
+    color: #b084ff;
+}
+
+.res_cuadr {
+    color: #ff4bd8;
+}
+
+.res_raiz {
+    color: #00ffbf;
+}
+
+.botonera {
+    display: grid;
+}
+
+.boton {
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    background-color: #3a3a3a;
+    cursor: pointer;
+}
+
+.otros {
+    background-color: #3b3b3b;
+}
+
+.operacion {
+    background-color: #4b4bff;
+}
+
+.igual {
+    background-color: #ff9500;
+}
+
+.deshab {
+    background-color: #1e1e1e;
+}
+
+footer {
+    background-color: #f0fff0;
+}
+
+.pie {
+    color: #3d6b5d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.autor {
+    color: #3d6b5d;
+    color: #3d6b5d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
