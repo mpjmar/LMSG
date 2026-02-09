@@ -13,14 +13,41 @@ let resultadoMostrado = false;  // Para saber si hay que empezar una nueva opera
 
 // Podemos convertirlo en array de dos formas:
 // const botonesNumeros = Array.from(document.querySelectorAll(".numero")); 
-const botonesNumeros = [...document.querySelectorAll(".numero")]; // Desesctructura el NodeList
+const botonesNumeros = [...document.querySelectorAll(".numero")]; // Devuelve un Array a partir de un NodeList
+const pantalla = document.getElementById("pantalla");
+const botonesOperadores = [...document.querySelectorAll(".operacion")];
+const botonIgual = document.getElementById("igual");
 
 // Recorremos el array
-for (let i = 0; i < botonesNumeros.length; i++) {
+/* for (let i = 0; i < botonesNumeros.length; i++) {
     botonesNumeros[i].addEventListener("click", () => {
         mostrarNumeroPantalla(botonesNumeros[i].textContent);
     })
-}
+} */
+
+// Método forEach() con funcion anónima
+/* botonesNumeros.forEach(boton => {
+    boton.addEventListener("click", function () {
+        mostrarNumeroPantalla(boton.textContent);
+    });
+}); */
+
+// Método forEach() con función flecha
+botonesNumeros.forEach(boton => {
+    boton.addEventListener("click", () => {
+        mostrarNumeroPantalla(boton.textContent);
+    });
+});
+
+botonesOperadores.forEach(boton => {
+    boton.addEventListener("click", () => {
+        manejarOperador(boton.textContent)
+    });
+});
+
+botonIgual.addEventListener("click", calcularOperacion);
+
+
 
 
 // *************************************
@@ -71,7 +98,7 @@ function habilitarPunto(){
 *
 */
 function actualizarPantalla() {
-
+    pantalla.textContent = valorActual;
 }
 
 
@@ -88,7 +115,15 @@ function actualizarPantalla() {
  *
  */
 function mostrarNumeroPantalla(numero) { 
-
+    if (resultadoMostrado) {
+        pantalla.textContent = valorActual;
+        resultadoMostrado = false;
+    } else if (valorActual === "0") {
+        valorActual = numero;
+    } else {
+        valorActual += numero;
+    }
+    actualizarPantalla();
 }
 
 /**
@@ -109,11 +144,14 @@ function mostrarPuntoPantalla() {
  *
  * - Se guarda la operación matemática seleccionada para luego aplicarla.
  * - Se guarda el número que había escrito en la pantalla.
- * - Se resetea la pantalla volviendo a poner el número a 0.
+ * - Se resetea el valor actual para poner el número a 0.
  *
  */
 function manejarOperador(operador) { 
-
+    operadorActual = operador;
+    valorAnterior = valorActual;
+    valorActual = "0";
+    resultadoMostrado = false;
 }
 
 /**
@@ -124,7 +162,36 @@ function manejarOperador(operador) {
  *
  */
 function calcularOperacion() { 
+    if (operadorActual === null || valorAnterior === null) return;
 
+    let num1 = parseFloat(valorAnterior);
+    let num2 = parseFloat(valorActual);
+    let resultado;
+
+    switch(operadorActual) {
+        case "+":
+            resultado = num1 + num2;
+            break;
+        case "-":
+            resultado = num1 - num2;
+            break;
+        case "x":
+            resultado = num1 * num2;
+            break;
+        case "/":
+            if (num2 === 0) {
+                valorActual = "Error";
+                // Ponerlo en rojo
+                return;
+            }
+            resultado = num1 / num2;
+            break;
+    }
+    valorActual = resultado.toString();
+    aplicarColorResultado(operadorActual);
+    actualizarPantalla();
+    resultadoMostrado = true;
+    
 }
 
 /**
@@ -192,7 +259,24 @@ function operacionInmediata(operacion) {
  *
  */
 function aplicarColorResultado(operador) { 
+    let classnames;
+    classnames = pantalla.getAttribute("class").split(" ");
 
+    switch (operador) {
+        case "+":
+            classnames[1] = "color-suma";
+            break;
+        case "-":
+            classnames[1] = "color-resta";
+            break;
+        case "x":
+            classnames[1] = "color-multiplicacion";
+            break;
+        case "/":
+            classnames[1] = "color-division";
+            break;
+    }
+    pantalla.className = classnames.join(" ");
 }
 
 /**
