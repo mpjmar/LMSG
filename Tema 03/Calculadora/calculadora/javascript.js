@@ -178,10 +178,16 @@ function calcularOperacion() {
         case "x":
             resultado = num1 * num2;
             break;
-        case "/":
+        case "÷":
             if (num2 === 0) {
                 valorActual = "Error";
-                // Ponerlo en rojo
+                /* let classnames = pantalla.getAttribute("class").split(" ");
+                classnames[1] = "color-error";
+                pantalla.className = classnames.join(" ");
+                actualizarPantalla(); 
+                return; */
+                pantalla.classList.replace("color-normal", "color-error");
+                actualizarPantalla();
                 return;
             }
             resultado = num1 / num2;
@@ -191,7 +197,6 @@ function calcularOperacion() {
     aplicarColorResultado(operadorActual);
     actualizarPantalla();
     resultadoMostrado = true;
-    
 }
 
 /**
@@ -201,7 +206,7 @@ function calcularOperacion() {
  *
  */
 function pantallaColorNormal() { 
-
+    pantalla.className = "pantalla color-normal";
 }
 /**
  * @brief Borra el número introducido actualmente en la pantalla.
@@ -259,7 +264,7 @@ function operacionInmediata(operacion) {
  *
  */
 function aplicarColorResultado(operador) { 
-    let classnames;
+    /* let classnames;
     classnames = pantalla.getAttribute("class").split(" ");
 
     switch (operador) {
@@ -276,7 +281,23 @@ function aplicarColorResultado(operador) {
             classnames[1] = "color-division";
             break;
     }
-    pantalla.className = classnames.join(" ");
+    pantalla.className = classnames.join(" "); */
+
+    pantallaColorNormal();
+    switch (operador) {
+        case "+":
+            pantalla.classList.replace("color-normal", "color-suma");
+            break;
+        case "-":
+            pantalla.classList.replace("color-normal", "color-resta");
+            break;
+        case "x":
+            pantalla.classList.replace("color-normal", "color-multiplicacion");
+            break;
+        case "/":
+            pantalla.classList.replace("color-normal", "color-division");
+            break;
+    }
 }
 
 /**
