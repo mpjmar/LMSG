@@ -61,6 +61,27 @@ botonIgual.addEventListener("click", calcularOperacion);
  *
  */
 document.addEventListener('DOMContentLoaded', () => {
+    // Damos funcionalidad a los botones
+
+    // Ambas funciones hacen lo mismo:
+    /* botonesNumeros.forEach(boton => {
+        boton.addEventListener("click", () => {
+            mostrarNumeroPantalla(boton.textContent);
+        });
+    });
+
+    botonesNumeros.forEach(boton => {
+        boton.addEventListener("click", (botonevento) => {
+            mostrarNumeroPantalla(botonevento.target.textContent);
+            console.log(botonevento);
+        })
+    }); */
+
+    botonesOperadores.forEach(boton => {
+        boton.addEventListener("click", () => {
+            manejarOperador(boton.textContent)
+        });
+    });
 });
 
 /**
