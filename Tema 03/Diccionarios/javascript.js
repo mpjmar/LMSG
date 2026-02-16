@@ -33,7 +33,7 @@ const infoProducto = document.getElementById("infoProducto");
 
 // ACCEDER AL VALOR DE UNA CLAVE-. NOTACION PREFERIDA -> CON CONRCHETES
 const producto = "pitufo";
-console.log(`Notación con punto: El prcio del ${producto} es ${carta.pitufo.precio}€`);
+console.log(`Notación con punto: El precio del ${producto} es ${carta.pitufo.precio}€`);
 console.log(`Notación con punto: El precio del ${producto} es ${carta[producto].precio}€`);
 
 // METODO PARA OBTENER LAS CLAVES
