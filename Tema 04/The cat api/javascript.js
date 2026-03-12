@@ -24,7 +24,7 @@ btnGato.addEventListener("click", () => {
             const url = data[0].url;
 
             // Mostramos la imagen en el div
-            resultado.innerHTML = `<img src="${url}" alt="Gato aleatorio" />`;
+            resultado.innerHTML = `<img src="${url}" class="imagenanimal" alt="Gato aleatorio" />`;
         })
         .catch(error => {
             // Mostrar el error en el div

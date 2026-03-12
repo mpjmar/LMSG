@@ -53,10 +53,10 @@ button:active{
 
 
 .imagenanimal{
-    max-width: 100%;              /* ← ocupa el ancho disponible */
-    max-height: 100%;             /* ← ocupa el alto disponible */
+    width: 100%;              /* ← ocupa el ancho disponible */
+    height: 100%;             /* ← ocupa el alto disponible */
     object-fit: contain;      /* ← NO recorta, solo ajusta manteniendo proporción */
-    /* object-fit: cover;      ← Rellena todo pero puede recortar */	
+    /*object-fit: cover;         ← Rellena todo pero puede recortar */	
     border-radius: 10px;
     display: block;
 }
